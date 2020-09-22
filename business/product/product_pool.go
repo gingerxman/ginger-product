@@ -383,13 +383,36 @@ func (this *ProductPool) GetLowStockProducts() []*PoolProduct {
 }
 
 // 获得在售商品的数量
-func (this *ProductPool) GetOnsaleCount() int {
+func (this *ProductPool) GetOnSaleCount() int {
 	o := eel.GetOrmFromContext(this.Ctx)
 
 	count := 0
-	db := o.Raw("select count(*) as count from product_pool_product where status = ? and corp_id = ?", m_product.PP_STATUS_ON, this.Corp.GetId()).Scan(&count)
+	db := o.Raw("select count(*) as count from product_pool_product where status = ? and corp_id = ?", m_product.PP_STATUS_ON, this.Corp.GetId())
 	if db.Error != nil {
 		eel.Logger.Error(db.Error)
+	}
+	
+	err := db.Row().Scan(&count)
+	if err != nil {
+		eel.Logger.Error(err)
+	}
+	
+	return count
+}
+
+// 获得待售商品的数量
+func (this *ProductPool) GetForSaleCount() int {
+	o := eel.GetOrmFromContext(this.Ctx)
+	
+	count := 0
+	db := o.Raw("select count(*) as count from product_pool_product where status = ? and corp_id = ?", m_product.PP_STATUS_OFF, this.Corp.GetId())
+	if db.Error != nil {
+		eel.Logger.Error(db.Error)
+	}
+	
+	err := db.Row().Scan(&count)
+	if err != nil {
+		eel.Logger.Error(err)
 	}
 	
 	return count

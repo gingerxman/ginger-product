@@ -39,6 +39,7 @@ func init() {
 	eel.RegisterResource(&product.OnshelfProducts{})
 	eel.RegisterResource(&product.CorpProducts{})
 	eel.RegisterResource(&product.CreateOptions{})
+	eel.RegisterResource(&product.CorpProductCount{})
 	
 	/*
 	 cart

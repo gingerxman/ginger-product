@@ -16,7 +16,7 @@ Feature: 创建商品分类
 	"""
 	Given lucy注册为App用户
 
-@ginger-product @product @wip
+@ginger-product @product
 Scenario: 酒吧管理员创建商品分类
 	# 初始验证
 	Given jobs登录系统

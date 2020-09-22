@@ -70,6 +70,7 @@ func (this *UpdateProductService) updateProduct(productId int, baseInfo *product
 		"name": strings.TrimSpace(baseInfo.Name),
 		"promotion_title": strings.TrimSpace(baseInfo.PromotionTitle),
 		"code": baseInfo.Code,
+		"liny_price": baseInfo.LinyPrice,
 		"category_id": baseInfo.CategoryId,
 		"thumbnail": strings.TrimSpace(mediaInfo.Thumbnail),
 	})
