@@ -27,6 +27,7 @@ func (this *EncodePoolProductService) Encode(poolProduct *PoolProduct) *RPoolPro
 	product := poolProduct.Product
 	rProductBaseInfo := RProductBaseInfo{}
 	rProductBaseInfo.Id = product.Id
+	rProductBaseInfo.SupplierId = product.CorpId
 	rProductBaseInfo.Name = product.Name
 	rProductBaseInfo.Type = product.Type
 	rProductBaseInfo.LinyPrice = product.LinyPrice

@@ -35,11 +35,13 @@ func init() {
 	eel.RegisterResource(&product.CorpProductProperties{})
 	//product
 	eel.RegisterResource(&product.Product{})
+	eel.RegisterResource(&product.Products{})
 	eel.RegisterResource(&product.OffshelfProducts{})
 	eel.RegisterResource(&product.OnshelfProducts{})
 	eel.RegisterResource(&product.CorpProducts{})
 	eel.RegisterResource(&product.CreateOptions{})
 	eel.RegisterResource(&product.CorpProductCount{})
+	eel.RegisterResource(&product.SkuStockConsumption{})
 	
 	/*
 	 cart

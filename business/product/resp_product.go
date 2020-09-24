@@ -49,6 +49,7 @@ type RProductLogisticsInfo struct {
 
 type RProductBaseInfo struct {
 	Id int `json:"id"`
+	SupplierId int `json:"supplier_id"`
 	Name string `json:"name"`
 	Type string `json:"type"`
 	CreateType string `json:"create_type"`
