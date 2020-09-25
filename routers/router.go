@@ -7,7 +7,6 @@ import (
 	"github.com/gingerxman/ginger-product/rest/area"
 	"github.com/gingerxman/ginger-product/rest/cart"
 	"github.com/gingerxman/ginger-product/rest/dev"
-	"github.com/gingerxman/ginger-product/rest/material"
 	"github.com/gingerxman/ginger-product/rest/product"
 )
 
@@ -53,7 +52,7 @@ func init() {
 	/*
 	 material
 	*/
-	eel.RegisterResource(&material.Image{})
+	//eel.RegisterResource(&material.Image{})
 	
 	/*
 	 area
