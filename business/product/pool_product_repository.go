@@ -86,7 +86,7 @@ func checkFieldNames(fields []string, fieldName string) bool {
 
 func (this *PoolProductRepository) parseFilters(filters map[string]interface{}) map[string]interface{}{
 	productFilters := eel.Map{}
-	productFields := []string{"name"}
+	productFields := []string{"name", "category_id"}
 
 	poolFilters := eel.Map{}
 
